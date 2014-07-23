@@ -1,0 +1,41 @@
+<div class="row-fluid">
+  <div class="span4 well">
+<%= form_for(@product) do |f| %>
+  <% if @product.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@product.errors.count, "error") %> prohibited this product from being saved:</h2>
+
+      <ul>
+      <% @product.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="control-group">
+    <%= f.label :name, :class => "control-label"  %><br>
+    <%= f.text_field :name, :class => "form-control" %>
+  </div>
+  <div class="controls">
+    <%= f.label :part_number %><br>
+    <%= f.number_field :part_number %>
+  </div>
+  <div class="controls">
+    <%= f.label :production_number %><br>
+    <%= f.text_field :production_number %>
+  </div>
+  <div class="controls">
+    <%= f.label :committee %><br>
+    <%= f.text_field :committee %>
+  </div>
+  <div class="controls">
+    <%= f.label :drawing_number %><br>
+    <%= f.text_field :drawing_number %>
+  </div>
+  <div class="form-actions">
+    <%= f.submit  :class => "btn btn-primary"%>
+  </div>
+<% end %>
+   </div>
+</div>

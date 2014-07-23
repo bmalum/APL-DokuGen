@@ -39,3 +39,9 @@ gem 'spring',        group: :development
 #+++++++++++ Added by Martin (bMalum) +++++++++++#
 gem 'mongo_mapper'
 gem 'bson_ext'
+
+# Semantic UI Style
+gem "therubyracer"
+gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
+gem "twitter-bootstrap-rails"
+gem "searchkick"
