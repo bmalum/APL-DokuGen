@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  apl: MyString
+  ext: MyString
+  customer_id: 1
+  contactperson_id: 1
+
+two:
+  apl: MyString
+  ext: MyString
+  customer_id: 1
+  contactperson_id: 1

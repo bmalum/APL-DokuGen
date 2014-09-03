@@ -1,0 +1,37 @@
+<h1>Listing w_numbers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Number</th>
+      <th>Darwing number</th>
+      <th>Year</th>
+      <th>Standard</th>
+      <th>Tag number</th>
+      <th>Name</th>
+      <th>Order</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @w_numbers.each do |w_number| %>
+      <tr>
+        <td><%= w_number.number %></td>
+        <td><%= w_number.darwing_number %></td>
+        <td><%= w_number.year %></td>
+        <td><%= w_number.standard %></td>
+        <td><%= w_number.tag_number %></td>
+        <td><%= w_number.name %></td>
+        <td><%= w_number.order_id %></td>
+        <td><%= link_to 'Show', w_number %></td>
+        <td><%= link_to 'Edit', edit_w_number_path(w_number) %></td>
+        <td><%= link_to 'Destroy', w_number, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New W number', new_w_number_path %>

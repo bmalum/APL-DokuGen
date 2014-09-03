@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  number: MyString
+  darwing_number: MyString
+  year: MyString
+  standard: MyString
+  tag_number: MyString
+  name: MyString
+  order_id: 1
+
+two:
+  number: MyString
+  darwing_number: MyString
+  year: MyString
+  standard: MyString
+  tag_number: MyString
+  name: MyString
+  order_id: 1
