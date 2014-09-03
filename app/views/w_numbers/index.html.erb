@@ -1,5 +1,12 @@
 <h1>Listing w_numbers</h1>
 
+<%= form_tag w_numbers_path, :method => 'get' do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil %>
+  </p>
+<% end %>
+
 <table>
   <thead>
     <tr>

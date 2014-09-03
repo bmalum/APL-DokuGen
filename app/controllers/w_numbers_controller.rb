@@ -3,8 +3,10 @@ class WNumbersController < ApplicationController
 
   # GET /w_numbers
   # GET /w_numbers.json
+
   def index
-    @w_numbers = WNumber.all
+      @w_numbers = WNumber.search(params[:search])
+    #@w_numbers = WNumber.all
   end
 
   # GET /w_numbers/1
