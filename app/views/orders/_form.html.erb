@@ -20,12 +20,16 @@
     <%= f.text_field :ext %>
   </div>
   <div class="field">
-    <%= f.label :customer_id %><br>
-    <%= f.number_field :customer_id %>
+    <%= f.label 'customer id' %><br>
+    <% if params[:customer] == NIL %>
+        <%= f.number_field :customer_id %>
+    <% else %>
+        <%= f.number_field :customer_id, :value => params[:customer]  %>
+    <% end %>
   </div>
   <div class="field">
     <%= f.label :contactperson_id %><br>
-    <%= f.hidden_filed :contactperson_id %>
+    <%= f.number_field :contactperson_id %>
   </div>
   <div class="actions">
     <%= f.submit %>

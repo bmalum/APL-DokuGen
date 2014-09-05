@@ -37,7 +37,11 @@
   </div>
   <div class="field">
     <%= f.label :order_id %><br>
-    <%= f.number_field :order_id %>
+    <% if params[:order_id] == NIL %>
+        <%= f.number_field :order_id %>
+    <% else %>
+    <%= f.number_field :order_id , :value => params[:order_id]%>
+    <%end %> 
   </div>
   <div class="actions">
     <%= f.submit %>
