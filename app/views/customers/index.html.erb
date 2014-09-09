@@ -1,13 +1,13 @@
 <h1>Listing customers</h1>
 
-<%= form_tag customers_path, :method => 'get' do %>
+<%= form_tag customers_path, :html => {:class => "form-horizontal"},  :method => 'get' do %>
   <p>
     <%= text_field_tag :search, params[:search] %>
-    <%= submit_tag "Search", :name => nil %>
+    <%= submit_tag "Search", :name => nil, :class => "btn" %>
   </p>
 <% end %>
 
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
       <th>Name</th>
@@ -35,4 +35,4 @@
 
 <br>
 
-<%= link_to 'New Customer', new_customer_path %>
+<%= link_to 'New Customer', new_customer_path, :class => "btn" %>
