@@ -37,3 +37,4 @@
 
 <%= link_to 'Edit', edit_w_number_path(@w_number) %> |
 <%= link_to 'Back', w_numbers_path %>
+<p><%= link_to "Printable (PDF)", order_path(@w_number, :format => 'pdf') %></p>

@@ -10,6 +10,7 @@ class OrdersController < ApplicationController
   # GET /orders/1
   # GET /orders/1.json
   def show
+        @w_numbers = WNumber.where("order_id = ?", @order.id) 
   end
 
   # GET /orders/new
