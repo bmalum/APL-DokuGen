@@ -40,3 +40,4 @@ gem 'spring',        group: :development
 
 #~~~~~~~~~~ Added by bMalum ~~~~~~~~~~#
 gem 'prawn'
+gem 'prawnto'

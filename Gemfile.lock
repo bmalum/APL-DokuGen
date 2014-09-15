@@ -58,6 +58,9 @@ GEM
     prawn (1.2.1)
       pdf-core (~> 0.2.5)
       ttfunk (~> 1.2.0)
+    prawnto (0.1.1)
+      prawn
+      rails (>= 2.1)
     rack (1.5.2)
     rack-test (0.6.2)
       rack (>= 1.0)
@@ -122,6 +125,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   prawn
+  prawnto
   rails (= 4.1.4)
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
