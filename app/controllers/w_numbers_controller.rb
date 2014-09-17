@@ -12,11 +12,12 @@ class WNumbersController < ApplicationController
   # GET /w_numbers/1
   # GET /w_numbers/1.json
   def show
+    @w_numbers = WNumber.find(params[:id])
+    @order = Order.find(@w_numbers.order_id)
   end
 
   # GET /w_numbers/new
   def new
-    @orders = Order.find(@w_numbers.order_id) 
   end
 
   # GET /w_numbers/1/edit
