@@ -16,7 +16,7 @@ class WNumbersController < ApplicationController
 
   # GET /w_numbers/new
   def new
-    @w_number = WNumber.new
+    @orders = Order.find(@w_numbers.order_id) 
   end
 
   # GET /w_numbers/1/edit
