@@ -14,6 +14,12 @@ class WNumbersController < ApplicationController
   def show
     @w_numbers = WNumber.find(params[:id])
     @order = Order.find(@w_numbers.order_id)
+    @customer = Customer.find(@order.customer_id)
+    begin
+    @contact = Contactperson.find(@order.contactperson_id)
+    rescue
+    flash[:alert] = "keine Kontaktperson angegeben!"
+  end
   end
 
   # GET /w_numbers/new
