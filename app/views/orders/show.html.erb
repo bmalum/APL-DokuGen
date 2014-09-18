@@ -26,9 +26,11 @@
 <%= link_to 'New Product for this Customer', new_w_number_path(:order_id => @order.id) %>
 
 <p> <br/> <br/> </p>
+
 <table class="table table-striped">
   <thead>
     <tr>
+      <th></th>
       <th>Number</th>
       <th>Darwing number</th>
       <th>Year</th>
@@ -43,6 +45,7 @@
   <tbody>
     <% @w_numbers.each do |w_number| %>
       <tr>
+        <td><%= check_box_tag "w_number_ids[]", w_number.id %></td>
         <td><%= w_number.number %></td>
         <td><%= w_number.darwing_number %></td>
         <td><%= w_number.year %></td>
@@ -56,4 +59,3 @@
       </tr>
     <% end %>
   </tbody>
-</table>

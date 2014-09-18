@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Copies:</strong>
+  <%= @end_documentation.copies %>
+</p>
+
+<p>
+  <strong>Cd:</strong>
+  <%= @end_documentation.cd %>
+</p>
+
+<p>
+  <strong>Created by:</strong>
+  <%= @end_documentation.created_by %>
+</p>
+
+<p>
+  <strong>Printed at:</strong>
+  <%= @end_documentation.printed_at %>
+</p>
+
+<p>
+  <strong>Language:</strong>
+  <%= @end_documentation.language %>
+</p>
+
+<%= link_to 'Edit', edit_end_documentation_path(@end_documentation) %> |
+<%= link_to 'Back', end_documentations_path %>

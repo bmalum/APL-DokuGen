@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>W number:</strong>
+  <%= @doku_id.w_number_id %>
+</p>
+
+<p>
+  <strong>Dokument:</strong>
+  <%= @doku_id.dokument_id %>
+</p>
+
+<%= link_to 'Edit', edit_doku_id_path(@doku_id) %> |
+<%= link_to 'Back', doku_ids_path %>

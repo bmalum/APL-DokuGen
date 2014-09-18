@@ -1,0 +1,37 @@
+<%= form_for(@end_documentation) do |f| %>
+  <% if @end_documentation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@end_documentation.errors.count, "error") %> prohibited this end_documentation from being saved:</h2>
+
+      <ul>
+      <% @end_documentation.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :copies %><br>
+    <%= f.number_field :copies %>
+  </div>
+  <div class="field">
+    <%= f.label :cd %><br>
+    <%= f.number_field :cd %>
+  </div>
+  <div class="field">
+    <%= f.label :created_by %><br>
+    <%= f.text_field :created_by %>
+  </div>
+  <div class="field">
+    <%= f.label :printed_at %><br>
+    <%= f.datetime_select :printed_at %>
+  </div>
+  <div class="field">
+    <%= f.label :language %><br>
+    <%= f.text_field :language %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

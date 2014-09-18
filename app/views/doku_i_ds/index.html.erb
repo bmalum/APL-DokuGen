@@ -1,0 +1,27 @@
+<h1>Listing doku_ids</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>W number</th>
+      <th>Dokument</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @doku_ids.each do |doku_id| %>
+      <tr>
+        <td><%= doku_id.w_number_id %></td>
+        <td><%= doku_id.dokument_id %></td>
+        <td><%= link_to 'Show', doku_id %></td>
+        <td><%= link_to 'Edit', edit_doku_id_path(doku_id) %></td>
+        <td><%= link_to 'Destroy', doku_id, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Doku', new_doku_id_path %>

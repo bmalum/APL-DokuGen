@@ -24,6 +24,7 @@ class WNumbersController < ApplicationController
 
   # GET /w_numbers/new
   def new
+        @w_number = WNumber.new
   end
 
   # GET /w_numbers/1/edit

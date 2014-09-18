@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  copies: 1
+  cd: 1
+  created_by: 
+  printed_at: 2014-09-18 10:10:35
+  language: MyString
+
+two:
+  copies: 1
+  cd: 1
+  created_by: 
+  printed_at: 2014-09-18 10:10:35
+  language: MyString

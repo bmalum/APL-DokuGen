@@ -1,0 +1,25 @@
+<%= form_for(@doku_id) do |f| %>
+  <% if @doku_id.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@doku_id.errors.count, "error") %> prohibited this doku_id from being saved:</h2>
+
+      <ul>
+      <% @doku_id.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :w_number_id %><br>
+    <%= f.number_field :w_number_id %>
+  </div>
+  <div class="field">
+    <%= f.label :dokument_id %><br>
+    <%= f.number_field :dokument_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
