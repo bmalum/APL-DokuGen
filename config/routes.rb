@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
   resources :customers
 
-  map.resources :end_documentation, :collection => { :create_multiple => :post}
+  resources :end_documentations, :collection => { :create_multiple => :post, :update_multiple => :put }
 
 
   # The priority is based upon order of creation: first created -> highest priority.
