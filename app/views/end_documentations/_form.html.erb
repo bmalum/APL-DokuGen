@@ -21,7 +21,7 @@
   </div>
   <div class="field">
     <%= f.label :created_by %><br>
-    <%= f.text_field :created_by %>
+    <%= f.number_field :created_by %>
   </div>
   <div class="field">
     <%= f.label :printed_at %><br>
@@ -30,6 +30,10 @@
   <div class="field">
     <%= f.label :language %><br>
     <%= f.text_field :language %>
+  </div>
+  <div class="field">
+    <%= f.label :params %><br>
+    <%= f.text_field :params %>
   </div>
   <div class="actions">
     <%= f.submit %>

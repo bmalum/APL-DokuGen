@@ -8,6 +8,7 @@
       <th>Created by</th>
       <th>Printed at</th>
       <th>Language</th>
+      <th>Params</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -20,6 +21,7 @@
         <td><%= end_documentation.created_by %></td>
         <td><%= end_documentation.printed_at %></td>
         <td><%= end_documentation.language %></td>
+        <td><%= end_documentation.params %></td>
         <td><%= link_to 'Show', end_documentation %></td>
         <td><%= link_to 'Edit', edit_end_documentation_path(end_documentation) %></td>
         <td><%= link_to 'Destroy', end_documentation, method: :delete, data: { confirm: 'Are you sure?' } %></td>

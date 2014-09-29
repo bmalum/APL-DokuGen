@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   resources :end_documentations
 
+#  resources :end_documentations
+
   resources :doku_ids
 
   resources :w_numbers
@@ -11,8 +13,11 @@ Rails.application.routes.draw do
 
   resources :customers
 
-  resources :end_documentations, :collection => { :create_multiple => :post, :update_multiple => :put }
-
+  resources :end_documentations do
+    member do
+      put 'print'
+    end
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

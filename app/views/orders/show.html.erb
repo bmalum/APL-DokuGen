@@ -27,7 +27,7 @@
 
 <p> <br/> <br/> </p>
 
-<%= form_tag new_end_documentation_path do %>
+<%= form_tag print_end_documentation_path, :method => :put do %>
 <table class="table table-striped">
   <thead>
     <tr>
@@ -58,7 +58,10 @@
         <td><%= link_to 'Edit', edit_w_number_path(w_number) %></td>
         <td><%= link_to 'Destroy', w_number, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
-    <% end %>
-         <td> <%= submit_tag("Search") %></td>
+    <% end %>        
   </tbody>
+</table>
+  <h3> Optionen: </h3>
+  <h4> Entwurfsprüfung (Anschreiben) erstellen:</h4>
+   Anzahl der CDs <%= number_field_tag :cd_value %> Anzahl der Kopien: <%= number_field_tag  :copy_value %> Sprache <%= text_field_tag :language %> Erstellt von <%= text_field_tag :user %> <%= submit_tag("Erstellen") %> 
 <% end %>

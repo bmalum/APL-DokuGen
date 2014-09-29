@@ -1,3 +1,5 @@
+require 'date'
+
 class EndDocumentationsController < ApplicationController
   before_action :set_end_documentation, only: [:show, :edit, :update, :destroy]
 
@@ -61,8 +63,21 @@ class EndDocumentationsController < ApplicationController
     end
   end
 
-  def create_multiple
+
+  # PUT /end_documentations/1
+  # PUT /end_documentations/1.json
+  def print
+    cds = params[:cd_value]
+    lang = params[:language]
+    copies = params[:copy_value]
+    user = params[:user]
+    w_number_ids = params[:w_number_ids].join(",")
+    EndDocumentation.create(copies: copies, cd: cds, created_by: user, printed_at: Date.today, language: lang, params: w_number_ids)
+    puts cds + lang + user + w_number_ids + copies
     
+    #EndDocumentation.create(:copies params[:cd_value])
+    #EndDocumentation.create("Parameter")
+    DokuId.create(w_number_id: "1234", dokument_id: "1111")
   end
 
   private
@@ -73,6 +88,6 @@ class EndDocumentationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def end_documentation_params
-      params.require(:end_documentation).permit(:copies, :cd, :created_by, :printed_at, :language)
+      params.require(:end_documentation).permit(:copies, :cd, :created_by, :printed_at, :language, :params)
     end
 end
